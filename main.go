@@ -1,5 +1,13 @@
 package main
 
+import (
+	"github.com/gin-gonic/gin"
+)
+
 func main() {
-	show()
+	r := gin.Default()
+
+	r.POST("/test", handler)
+
+	_ = r.Run(":9090")
 }
